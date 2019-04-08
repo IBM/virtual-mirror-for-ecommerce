@@ -51,7 +51,7 @@ Clone this [git repo](https://github.ibm.com/raravi86/Virtual-Mirror.git).
 Else, in a terminal, run:
 
 ```
-$ git clone https://github.com/RahulReddyRavipally/Virtual-Mirror.git
+$ git clone https://github.com/IBM/virtual-mirror-for-ecommerce
 ```
 ### 2. Recommendation Engine Setup
 
