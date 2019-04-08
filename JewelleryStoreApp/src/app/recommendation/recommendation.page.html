@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Recommended Products
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list *ngFor = "let item of items">
+        <ion-list-header>
+          <ion-card-title>{{item.category}}</ion-card-title>
+          <ion-card-subtitle>Type: {{item.type}} ring</ion-card-subtitle>
+        </ion-list-header>
+        <ion-card *ngFor = "let i of item.products" (click)="tryvirtually(i.img,item.type,i.height,i.width)">
+          <img height="300" width="200" src="{{objectStorageAccess.baseUrl}}{{i.img}}" (click)="tryvirtually(i.img,item.type,i.height,i.width)"/>
+          <ion-card-header>
+            <ion-card-title>{{i.name}}</ion-card-title>
+            <ion-card-subtitle>Dimensions: {{i.height}} cm x {{i.width}} cm</ion-card-subtitle>
+          </ion-card-header>
+          <ion-item (click)="tryvirtually(i.img,item.type,i.height,i.width)">
+            <ion-label color="primary">Try on Virtual Mirror</ion-label>
+            <ion-icon  color="primary" name="open" item-left></ion-icon>  
+          </ion-item>
+        </ion-card>
+    </ion-list>
+</ion-content>
