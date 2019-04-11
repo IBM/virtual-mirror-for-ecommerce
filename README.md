@@ -245,6 +245,8 @@ After Installing postman type  https://YOUR-APP-URL/?age=40&name=Kavya&gender=F 
 * Create a cloud foundry instance [IBM Cloud Foundry Service](https://cloud.ibm.com/catalog/starters/sdk-for-nodejs) and follow set of instructions for deploying JavaScript application to IBM Cloud Foundry.
 
  <img src="doc/source/images/cloudfoundry.png" alt="Cloud Foundry Virtual Mirror" width="800" border="10" />
+ 
+ <b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
 
 * Use IBM Cloud command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 
@@ -317,6 +319,8 @@ $ cd VisualRecognition
 * Create a cloud foundry instance [IBM Cloud Foundry Service](https://cloud.ibm.com/catalog/starters/sdk-for-nodejs) and follow set of instructions for deploying JavaScript application to IBM Cloud Foundry.
 
  <img src="doc/source/images/cloudfoundry2.png" alt="Cloud Foundry Visual Recognition" width="800" border="10" />
+ 
+ <b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
 
 * Use IBM Cloud command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 
