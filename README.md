@@ -20,10 +20,20 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Flow
 
 1. Take input from user's mobile.
-2. Send the input to the recommendation system application via Mobile First Foundation.
-3. Interact with the Db2 on Cloud to get details of the required products.
-4. Send the recommended products to the to the user's mobile via Mobile First Foundation.
-5. Send the input to the Virtual Mirror application via Mobile First Foundation and visualize on virtual mirror.
+2. The input is passed via Mobile First Foundation.
+3. Mobile First Foundation passes the user's input to the visual recognition application.
+4. The visual recognition application interacts with the watson visual recognition service, which returns appropriate output.
+5. The output(age and gender of user) is then send to user's mobile application.
+6. The user clicks on "Get Recommendations" button.
+7. Requests the recommendation engine to return approriate recommendation based the visual recognition applications output.
+8. Recommendation engine interacts with IBM Db2 to get the necessary product details for the recommendated products.
+9. Images of the recommendated products is retrived from Cloud Object Storage.
+10. Images and details of the recommended products is retrived by the recommendation engine.
+11. Recommendation engine returns the images and details of the recommended products to the user's mobile application.
+12. The user clicks on "Try on virtual mirror" feature.
+13. Requests the virtual mirror application to show the selected jewellery virtually on the face.
+14. Virtual mirror application opens the front camera on the user's mobile.
+15. User will able to view the jewellery virtually on them.
 
 <!--Optionally, update this section when the video is created-->
 # Watch the Video
