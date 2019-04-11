@@ -183,6 +183,8 @@ $ python3 upload.py
 * Create a cloud foundry instance [IBM Cloud Foundry Service](https://cloud.ibm.com/catalog/starters/python) and follow set of instructions for deploying python application to IBM Cloud Foundry.
 
  <img src="doc/source/images/cloudfoundrypython.png" alt="Database Storage" width="800" border="10" />
+ 
+<b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME` as shown below.</b>
 
 * Use IBM Cloud command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 
