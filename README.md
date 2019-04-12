@@ -20,20 +20,10 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Flow
 
 1. Take input from user's mobile.
-2. The input is passed via Mobile First Foundation.
-3. Mobile First Foundation passes the user's input to the visual recognition application.
-4. The visual recognition application interacts with the Watson Visual Recognition service, which returns appropriate output.
-5. The output(age and gender of user) is then send to user's mobile application.
-6. The user clicks on "Get Recommendations" button.
-7. Requests the recommendation engine to return appropriate recommendation based the visual recognition applications output.
-8. Recommendation engine interacts with IBM Db2 to get the necessary product details for the recommended products.
-9. Images of the recommended products is retrieved from Cloud Object Storage.
-10. Images and details of the recommended products is retrieved by the recommendation engine.
-11. Recommendation engine returns the images and details of the recommended products to the user's mobile application.
-12. The user clicks on "Try on virtual mirror" feature.
-13. Requests the virtual mirror application to show the selected jewellery virtually on the face.
-14. Virtual mirror application opens the front camera on the user's mobile.
-15. User will able to view the jewellery virtually on them.
+2. Send the input to the recommendation system application via Mobile First Foundation.
+3. Interact with the Db2 on Cloud to get details of the required products.
+4. Send the recommended products to the to the user's mobile via Mobile First Foundation.
+5. Send the input to the Virtual Mirror application via Mobile First Foundation and visualize on virtual mirror.
 
 <!--Optionally, update this section when the video is created-->
 # Watch the Video
@@ -61,7 +51,7 @@ Clone this [git repo](https://github.ibm.com/raravi86/Virtual-Mirror.git).
 Else, in a terminal, run:
 
 ```
-$ git clone https://github.com/IBM/virtual-mirror-for-ecommerce
+$ git clone https://github.com/RahulReddyRavipally/Virtual-Mirror.git
 ```
 ### 2. Recommendation Engine Setup
 
@@ -193,8 +183,8 @@ $ python3 upload.py
 * Create a cloud foundry instance [IBM Cloud Foundry Service](https://cloud.ibm.com/catalog/starters/python) and follow set of instructions for deploying python application to IBM Cloud Foundry.
 
  <img src="doc/source/images/cloudfoundrypython.png" alt="Database Storage" width="800" border="10" />
- 
-<b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME` as shown below.</b>
+
+<b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
 
 * Use IBM Cloud command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 
@@ -255,8 +245,8 @@ After Installing postman type  https://YOUR-APP-URL/?age=40&name=Kavya&gender=F 
 * Create a cloud foundry instance [IBM Cloud Foundry Service](https://cloud.ibm.com/catalog/starters/sdk-for-nodejs) and follow set of instructions for deploying JavaScript application to IBM Cloud Foundry.
 
  <img src="doc/source/images/cloudfoundry.png" alt="Cloud Foundry Virtual Mirror" width="800" border="10" />
- 
- <b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
+
+<b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
 
 * Use IBM Cloud command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 
@@ -329,8 +319,8 @@ $ cd VisualRecognition
 * Create a cloud foundry instance [IBM Cloud Foundry Service](https://cloud.ibm.com/catalog/starters/sdk-for-nodejs) and follow set of instructions for deploying JavaScript application to IBM Cloud Foundry.
 
  <img src="doc/source/images/cloudfoundry2.png" alt="Cloud Foundry Visual Recognition" width="800" border="10" />
- 
- <b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
+
+<b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
 
 * Use IBM Cloud command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 
@@ -639,8 +629,6 @@ Registered app for platform: android
 $ ionic cordova build android
 ```
 <b>Note: The `build` & `run` commands should be executed in the `JewelleryStoreApp` directory and not else where.</b>
-
-> Note: In case the Cordova build fails due to missing `ANDROID_HOME` and `JAVA_HOME` environment variables, then set those environment variables as per instructions in https://cordova.apache.org/docs/en/latest/guide/platforms/android/#setting-environment-variables. `ANDROID_HOME` should be set to the `Android SDK Location` that you noted in [Step 7.1](#71-install-android-studio-and-android-sdk-platform). Command `/usr/libexec/java_home` returns the value to be used for setting `JAVA_HOME` on [macOS](https://mattshomepage.com/articles/2016/May/22/java_home_mac_os_x/). On other platforms you could run `java -XshowSettings:properties 2>&1 | grep 'java.home'` as mentioned [here](http://sbndev.astro.umd.edu/wiki/Finding_and_Setting_JAVA_HOME#Sample_Perl_Script:_java_home).
 
 <b>Note: Make sure you Connect the Android phone to your development machine by USB cable, and accept the adb access permissions.</b>
 
