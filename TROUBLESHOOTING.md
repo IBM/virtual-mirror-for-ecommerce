@@ -44,6 +44,9 @@ or something similar to these messages that is if you get `5xx` errors you can f
 * If the problem still persists you can delete the MobileFoundation & MobileFoundation Server resource and create it once again.
 
 #### 4. Problem Building/Running the Ionic application on Android phone
+* In case the Cordova build fails due to missing `ANDROID_HOME` and `JAVA_HOME` environment variables, then set those environment variables as per instructions in https://cordova.apache.org/docs/en/latest/guide/platforms/android/#setting-environment-variables. `ANDROID_HOME` should be set to the `Android SDK Location`. Command `/usr/libexec/java_home` returns the value to be used for setting `JAVA_HOME` on [macOS](https://mattshomepage.com/articles/2016/May/22/java_home_mac_os_x/). On other platforms you could run `java -XshowSettings:properties 2>&1 | grep 'java.home'` as mentioned [here](http://sbndev.astro.umd.edu/wiki/Finding_and_Setting_JAVA_HOME#Sample_Perl_Script:_java_home).
+
+
 * If you get error related to Cordova platform, or if you do not get the permissions prompt on your phone you can do the following.
 
 * Remove current Cordova platform.
