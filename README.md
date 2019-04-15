@@ -143,7 +143,7 @@ $ python3 upload.py
 
 ![](doc/source/images/Db21.png)
 
-* Click on `browse files` and upload `products.csv`, as shown below. `products.csv` can be found in the root folder of `ProductDetailsDB2`.
+* Click on `browse files` and upload `data.csv`, as shown below. `data.csv` can be found in the root folder of `ProductDetailsDB2`.
 
 ![](doc/source/images/Db22.png)
 
