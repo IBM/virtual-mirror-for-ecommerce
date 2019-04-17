@@ -2,7 +2,7 @@
 
 Virtual try on apps have the full potential to become the next big thing in e-commerce. They relieve much of the stress of going into a store and physically try on different products. They save consumers’ time and brands’ budget, serving as a cost-effective yet convenient alternative for trying on products.Most importantly, it makes choosing products we'll love as easy as watching in the mirror.
 
-In this code pattern, we will develop a hybrid mobile application using Mobile First Foundation integrated with recommendation system based on Watson Visual Recognition , which takes in an image of the user as an input and based on his/her features(like age, gender, etc), it returns a personalized recommendation of jewellery products. The user can later try these jewellery products virtually using the virtual mirror feature.
+In this code pattern, we will develop a hybrid mobile application using Mobile First Foundation integrated with recommendation system based on Watson Visual Recognition , which takes in an image of the user as input and detects his/her features(like age, gender, etc) with the help of Watson Visual Recognition model. Based on these features, the recommendation engine returns a personalized recommendation of jewellery products. The user can later try these jewellery products virtually using the virtual mirror feature.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
