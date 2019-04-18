@@ -1,6 +1,6 @@
 # Integrate a virtual mirror with e-commerce products
 
-Virtual try on apps have the full potential to become the next big thing in e-commerce. They relieve much of the stress of going into a store and physically try on different products. They save consumers’ time and brands’ budget, serving as a cost-effective yet convenient alternative for trying on products.Most importantly, it makes choosing products we'll love as easy as watching in the mirror.
+Virtual try on apps have the full potential to become the next big thing in e-commerce. They relieve much of the stress of going into a store and physically try on different products. They save consumers’ time and brands’ budget, serving as a cost-effective yet convenient alternative for trying on products. Most importantly, it makes choosing products we'll love as easy as watching in the mirror.
 
 In this code pattern, we will develop a hybrid mobile application using Mobile First Foundation integrated with recommendation system based on Watson Visual Recognition , which takes in an image of the user as input and detects his/her features(like age, gender, etc) with the help of Watson Visual Recognition model. Based on these features, the recommendation engine returns a personalized recommendation of jewellery products. The user can later try these jewellery products virtually using the virtual mirror feature.
 
@@ -25,12 +25,12 @@ When the reader has completed this Code Pattern, they will understand how to:
 1. Take input from user's mobile.
 2. Send the input to the recommendation system application via Mobile First Foundation.
 3. Interact with the Db2 on Cloud to get details of the required products.
-4. Send the recommended products to the to the user's mobile via Mobile First Foundation.
+4. Send the recommended products to the user's mobile via Mobile First Foundation.
 5. Send the input to the Virtual Mirror application via Mobile First Foundation and visualize on virtual mirror.
 
 ## Pre-requisites
 
-* [IBM Cloud account](https://www.ibm.com/cloud/) : Create an IBM Cloud account.
+* [IBM Cloud account](https://www.ibm.com/cloud/): Create an IBM Cloud account.
 * [Python 3](https://www.python.org/downloads/): Install python 3.
 * [Java 1.8.x](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html): Make sure you have required version (Java 1.8.x).
 
@@ -54,7 +54,7 @@ $ git clone https://github.com/RahulReddyRavipally/Virtual-Mirror.git
 ```
 ### 2. Recommendation Engine Setup
 
-In this step we will be building a recommendation engine which takes users's age and gender as input ,and gives out a recommendation accordingly.
+In this step we will be building a recommendation engine which takes users's age and gender as input, and gives out a recommendation accordingly.
 
 #### 2.1. Sign up for IBM Cloud Object Storage
 We use [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage) to store the jewellery images required for recommendation and the dataset.
@@ -71,7 +71,7 @@ We use [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-o
 * Create Service ID
   * In a separate browser tab/window, launch the IBM Cloud Identity & Access Management dashboard using URL https://cloud.ibm.com/iam/.
   * In case you have multiple IBM Cloud accounts, then select the target Account, Region, Organization and Space.
-  * Under `Identity & Access` (on the left side of the page), select `Service IDs` and click `Create` on the right top of the page. Give a name and description, and click Create.
+  * Under `Identity & Access` (on the left side of the page), select `Service IDs` and click `Create` on the right top of the page. Give a name and description, and click `Create`.
   * Make a note of the name of the Service ID as shown below.
 
 
@@ -82,12 +82,12 @@ We use [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-o
 * Add Cloud Object Storage Writer role to that service ID
 
   * Back in IBM Cloud Object Storage dashboard, select `Bucket permissions` under `Buckets` click on `policies`.
-  * Click on `Service IDs` tab. Under `Select a service ID`, select the service ID created in the above step. Under `Assign a role to this service ID for this bucket`, select `Writer`. Click Create policy as shown below.
+  * Click on `Service IDs` tab. Under `Select a service ID`, select the service ID created in the above step. Under `Assign a role to this service ID for this bucket`, select `Writer`. Click `Create policy as shown below.
 
 
   <img src="doc/source/images/serviceid.png" alt="Cloud Object Storage" width="800" border="10" />
 
-You should get a confirmation dialog saying “Service permission created“.
+You should get a confirmation dialog saying `Service permission created`.
 * Create API Key
 
   * Back in IBM Cloud Identity & Access Management dashboard, under `Service IDs`, click on the service ID created earlier. Under `Access policies`, you should see the `Writer` role for your bucket.
@@ -108,7 +108,7 @@ To access the Cloud Object Storage service programmatically, you need to copy in
 
   <img src="doc/source/images/service_credentials_create.png" alt="Cloud Object Storage" width="800" border="10" />
 
-* Select Include HMAC Credentials as shown bellow.
+* Select Include HMAC Credentials as shown below.
 
   <img src="doc/source/images/hmac_image.png" alt="Cloud Object Storage" width="800" border="10" />
 
@@ -116,7 +116,7 @@ To access the Cloud Object Storage service programmatically, you need to copy in
 
   <img src="doc/source/images/service_credentials.png" alt="Cloud Object Storage" width="800" border="10" />
 
-* Copy your credentials. Create a file `credentials1.json` and paste the copied credentials into this file.Place this file in the directory `JewelleryRecommendation` and also in the directory `UploadProductsCOS`.
+* Copy your credentials. Create a file `credentials1.json` and paste the copied credentials into this file. Place this file in the directory `JewelleryRecommendation` and also in the directory `UploadProductsCOS`.
 * Replace `xxxxxx` in the place holder `bucket_name` with your corresponding bucket name in the file `KMeans_200.py`.
 
   <img src="doc/source/images/tablename.png" alt="Cloud Object Storage" width="800" border="10" />
@@ -220,7 +220,7 @@ $ ibmcloud cf push YOUR-APP-NAME
 ```
 >Example: ibmcloud cf push recommendation-engine
 
-* Once you have deployed the application Make a note of the `URL` of the instance by right clicking on the `Visit app URL` and copying the link.
+* Once you have deployed the application, make a note of the `URL` of the instance by right clicking on the `Visit app URL` and copying the link.
 
   <img src="doc/source/images/cloudfoundryURL1.png" alt="Database Storage" width="800" border="10" />
 
@@ -229,7 +229,7 @@ $ ibmcloud cf push YOUR-APP-NAME
 
 #### 2.7. Test your deployment
 
-To Test your deployment use any REST Clients like [Postman](https://www.getpostman.com/downloads/).
+To test your deployment use any REST Clients like [Postman](https://www.getpostman.com/downloads/).
 After Installing postman type  https://YOUR-APP-URL/?age=40&name=Kavya&gender=F to test whether Recommendation engine works.
 
  * Now click on `Send` button to run the `GET /` API. The API response should be shown in the `Response Body` as shown in snapshot below.
@@ -245,7 +245,7 @@ After Installing postman type  https://YOUR-APP-URL/?age=40&name=Kavya&gender=F 
 
  <img src="doc/source/images/cloudfoundry.png" alt="Cloud Foundry Virtual Mirror" width="800" border="10" />
 
-<b>NOTE: Make Sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
+<b>NOTE: Make sure the Cloud Foundry App gets at least `256MB` of Memory. You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > YOUR_APP_NAME`.</b>
 
 * Use IBM Cloud command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 
@@ -279,13 +279,13 @@ $ ibmcloud login  -o example@in.ibm.com -s dev -sso
 ```
 $ ibmcloud cf push YOUR-APP-NAME
 ```
->Example: ibmcloud cf push virtual-mirror
+>Example: `ibmcloud cf push virtual-mirror`
 
-* Once you have deployed the application Make a note of the `URL` of the instance by right clicking on the `Visit app URL` and copying the link.
+* Once you have deployed the application make a note of the `URL` of the instance by right clicking on the `Visit app URL` and copying the link.
 
   <img src="doc/source/images/cloudfoundryURL.png" alt="Database Storage" width="800" border="10" />
 
-<b>Note: This URL is Important as it will be used in step 5.4.2.</b>
+<b>Note: This URL is important as it will be used in step 5.4.2.</b>
 
 ### 4. Watson Visual Recognition Setup
   
@@ -353,7 +353,7 @@ $ ibmcloud login  -o example@in.ibm.com -s dev -sso
 ```
 $ ibmcloud cf push YOUR_APP_NAME
 ```
->Example: ibmcloud cf push watsonvr
+>Example: `ibmcloud cf push watsonvr`
 
 * Once you have deployed the application Make a note of the `URL` of the instance by right clicking on the `Visit app URL` and copying the link.
 
@@ -404,7 +404,7 @@ $ mfpdev --version
 $ java -version
 java version "1.8.0_101"
 ```
-> Note: Java version `1.8.x` is required for cordova to compile apks. Do not Download Java version `11.x`. If you already have java version above `1.8.x` then you can follow the guide in `TROUBLESHOOTING.md` to uninstall the java and reinstall `1.8.x`.
+> Note: Java version `1.8.x` is required for cordova to compile apks. Do not download Java version `11.x`. If you already have java version above `1.8.x` then you can follow the guide in `TROUBLESHOOTING.md` to uninstall the java and reinstall `1.8.x`.
 
 * Install Maven:
 On Mac, you can use `brew install` for installing Maven as shown below:
@@ -436,7 +436,7 @@ On Windows, you can follow this [Tutorial](https://gradle.org/install/) to insta
 
 >NOTE: The `user`, `password` and `url` is Important as it will be used in subsequent steps.
 
-<b>NOTE: Make Sure the Cloud Foundry App for Mobile Foundation-Server gets at least `768MB` of Memory.(Recommended is 1GB) You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > MobileFoundation-Server` as shown below.</b>
+<b>NOTE: Make Sure the Cloud Foundry App for Mobile Foundation-Server gets at least `768MB` of Memory. (Recommended is 1GB) You can verify it by going to `IBM Cloud Dashboard > Resources > Cloud Foundry Apps > MobileFoundation-Server` as shown below.</b>
 
   <img src="doc/source/images/MobileFoundationServiceMemory.png" alt="Create IBM Mobile Foundation memory" width="800" border="10" />
 
@@ -521,7 +521,7 @@ $ mfpdev adapter build
 Building adapter...
 Successfully built adapter
 ```
-* Deploy the adapter as shown bellow.
+* Deploy the adapter as shown below.
 ```
 $ mfpdev adapter deploy
 Verifying server configuration...
@@ -552,7 +552,7 @@ Update MFP Adapter configuration as below:
      <img src="doc/source/images/MobileFoundationAdapterApis.png" alt="The REST APIs of ImageFetch adapter" width="800" border="10" />
 
 ##### 5.4.3 Test the ImageFetch adapter
-To Test the adapter use any REST Clients like [Postman](https://www.getpostman.com/downloads/).
+To test the adapter use any REST Clients like [Postman](https://www.getpostman.com/downloads/).
 After Installing postman type the `url` created in [step 5.2] and append it with `/mfp/api/adapters/ImagesFetch/resource` and `/objectStorage` to test whether the adapter is establishing connection with Cloud Object Storage.
 
 >Example: `https://mobilefoundation-xxxx-xxxxxx.xx-xx.mybluemix.net/mfp/api/adapters/ImageFetch/resource/objectStorage`
