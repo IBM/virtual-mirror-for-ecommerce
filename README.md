@@ -2,7 +2,10 @@
 
 Virtual try on apps have the full potential to become the next big thing in e-commerce. They relieve much of the stress of going into a store and physically try on different products. They save consumers’ time and brands’ budget, serving as a cost-effective yet convenient alternative for trying on products. Most importantly, it makes choosing products we'll love as easy as watching in the mirror.
 
-In this code pattern, we will develop a hybrid mobile application using Mobile First Foundation integrated with recommendation system based on Watson Visual Recognition, which takes in an image of the user as an input and based on his/her features (like age, gender, etc), it returns a personalized recommendation of jewellery products. The user can later try these jewellery products virtually using the virtual mirror feature.
+In this code pattern, we will develop a hybrid mobile application using Mobile First Foundation integrated with recommendation system based on Watson Visual Recognition , which takes in an image of the user as input and detects his/her features(like age, gender, etc) with the help of Watson Visual Recognition model. Based on these features, the recommendation engine returns a personalized recommendation of jewellery products. The user can later try these jewellery products virtually using the virtual mirror feature.
+
+This is a composite pattern and requires you to have a knowledge of the following code pattern:
+- [Recommendation system based on visual recognition](https://github.com/IBM/recommender-with-watson-visual-recognition)
 
 When the reader has completed this Code Pattern, they will understand how to:
 
@@ -25,9 +28,6 @@ When the reader has completed this Code Pattern, they will understand how to:
 4. Send the recommended products to the user's mobile via Mobile First Foundation.
 5. Send the input to the Virtual Mirror application via Mobile First Foundation and visualize on virtual mirror.
 
-<!--Optionally, update this section when the video is created-->
-# Watch the Video
-
 ## Pre-requisites
 
 * [IBM Cloud account](https://www.ibm.com/cloud/): Create an IBM Cloud account.
@@ -43,7 +43,6 @@ Please follow the below to setup and run this code pattern.
 3. [Virtual Mirror Setup](#3-virtual-mirror-setup)
 4. [Watson Visual Recognition Setup](#4-watson-visual-recognition-setup)
 5. [Mobile Application Setup](#5-mobile-application-setup)
-
 
 ### 1. Clone the repo
 
@@ -143,7 +142,7 @@ $ python3 upload.py
 
 ![](doc/source/images/Db21.png)
 
-* Click on `browse files` and upload `products.csv`, as shown below. `products.csv` can be found in the root folder of `ProductDetailsDB2`.
+* Click on `browse files` and upload `data.csv`, as shown below. `data.csv` can be found in the root folder of `ProductDetailsDB2`.
 
 ![](doc/source/images/Db22.png)
 

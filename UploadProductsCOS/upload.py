@@ -14,7 +14,7 @@ fileToUpload = ['Hanging/hanging1.png', 'Hanging/hanging2.png', 'Hanging/hanging
                 'Nosestud/ns1.png', 'Nosestud/ns2.png', 'Nosestud/ns3.png', 'Nosestud/ns4.png',
                 'Barbell/barbell1.png', 'Barbell/barbell2.png', 'Barbell/barbell3.png', 'Barbell/barbell4.png']
 
-# have a separate credentials.json file where the credentials of your bucket associated with notebook is listed
+# have a separate credentials1.json file where the credentials of your bucket associated with notebook is listed
 with open('credentials1.json') as data_file:
     credentials = json.load(data_file)
 
@@ -37,6 +37,7 @@ cos = ibm_boto3.client('s3',
                     endpoint_url=service_endpoint)
 
 # name of the bucket in the cloud object storage associated with notebook
+# Note: The bucket_name is case sensitive.
 bucket_name='XXXXXX'
 try:
     fileobject1=cos.upload_file('co_200.csv',bucket_name,'co_200.csv')
