@@ -711,22 +711,22 @@ $ keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -val
 Enter keystore password:
 Re-enter new password:
 What is your first and last name?
-  [Unknown]:  Manoj Jahgirdar
+  [Unknown]:  xxxxx xxxxx
 What is the name of your organizational unit?
-  [Unknown]:  ISL
+  [Unknown]:  XXX
 What is the name of your organization?
-  [Unknown]:  IBM
+  [Unknown]:  XXX
 What is the name of your City or Locality?
-  [Unknown]:  Bangalore
+  [Unknown]:  xxxxxxxx
 What is the name of your State or Province?
-  [Unknown]:  Karnataka
+  [Unknown]:  xxxxxxxx
 What is the two-letter country code for this unit?
-  [Unknown]:  IN
-Is CN=Manoj Jahgirdar, OU=ISL, O=IBM, L=Bangalore, ST=Karnataka, C=IN correct?
+  [Unknown]:  XX
+Is CN=xxxxxx xxxxx, OU=XXX, O=XXX, L=xxxxxxxx, ST=xxxxxxxx, C=XX correct?
   [no]:  yes
 
 Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10,000 days
-	for: CN=Manoj Jahgirdar, OU=ISL, O=IBM, L=Bangalore, ST=Karnataka, C=IN
+	for: CN=xxxxx xxxxx, OU=XXX, O=XXX, L=xxxxxxxx, ST=xxxxxxxx, C=XX
 Enter key password for <my-alias>
 	(RETURN if same as keystore password):
 [Storing my-release-key.jks]
