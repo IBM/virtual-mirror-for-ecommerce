@@ -1,11 +1,11 @@
 # Integrate a virtual mirror with e-commerce products
 
-Virtual try on apps have the full potential to become the next big thing in e-commerce. They relieve much of the stress of going into a store and physically try on different products. They save consumers’ time and brands’ budget, serving as a cost-effective yet convenient alternative for trying on products. Most importantly, it makes choosing products we'll love as easy as watching in the mirror.
+Virtual try on apps have the full potential to become the next big thing in e-commerce. They relieve much of the stress of going into a store and physically try on different products. They save consumers' time and brands’ budget, serving as a cost-effective yet convenient alternative for trying on products. Most importantly, it makes choosing products we'll love as easy as watching in the mirror.
 
 In this code pattern, we will develop a hybrid mobile application using Mobile First Foundation integrated with recommendation system based on Watson Visual Recognition , which takes in an image of the user as input and detects his/her features(like age, gender, etc) with the help of Watson Visual Recognition model. Based on these features, the recommendation engine returns a personalized recommendation of jewellery products. The user can later try these jewellery products virtually using the virtual mirror feature.
 
 This is a composite pattern and requires you to have a knowledge of the following code pattern:
-- [Recommendation system based on visual recognition](https://github.com/IBM/recommender-with-watson-visual-recognition)
+* [Recommendation system based on visual recognition](https://github.com/IBM/recommender-with-watson-visual-recognition)
 
 When the reader has completed this Code Pattern, they will understand how to:
 
@@ -16,10 +16,8 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Access images from Cloud Object Storage using a mobile application.
 * Connect and access Db2 on Cloud.
 
-<!--add an image in this path-->
 ![](doc/source/images/Architecture.png)
 
-<!--Optionally, add flow steps based on the architecture diagram-->
 ## Flow
 
 1. Take input from user's mobile.
@@ -34,7 +32,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * [Python 3](https://www.python.org/downloads/): Install python 3.
 * [Java 1.8.x](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html): Make sure you have required version (Java 1.8.x).
 
-# Steps
+## Steps
 
 Please follow the below to setup and run this code pattern.
 
@@ -46,18 +44,20 @@ Please follow the below to setup and run this code pattern.
 
 ### 1. Clone the repo
 
-Clone this [git repo](https://github.ibm.com/raravi86/Virtual-Mirror.git).
-Else, in a terminal, run:
+Clone this [git repo](https://github.com/IBM/virtual-mirror-for-ecommerce.git) in a terminal, run:
 
 ```
-$ git clone https://github.com/RahulReddyRavipally/Virtual-Mirror.git
+$ git clone https://github.com/IBM/virtual-mirror-for-ecommerce.git
 ```
+
 ### 2. Recommendation Engine Setup
 
 In this step we will be building a recommendation engine which takes users's age and gender as input, and gives out a recommendation accordingly.
 
 #### 2.1. Sign up for IBM Cloud Object Storage
+
 We use [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage) to store the jewellery images required for recommendation and the dataset.
+
 ##### 2.1.1 Create IBM Cloud Object Storage
 
 * In the `IBM Cloud Dashboard`, click on `Catalog` and select `Object Storage` service under `Infrastructure` -> `Storage`. Click on `Create` as shown below.
@@ -68,6 +68,7 @@ We use [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-o
 <b>Note: Make a note of the `Bucket Name` as it is Important and will be used in step 5.4.2</b>
 
 ##### 2.1.2 Create Service ID and API Key for accessing objects
+
 * Create Service ID
   * In a separate browser tab/window, launch the IBM Cloud Identity & Access Management dashboard using URL https://cloud.ibm.com/iam/.
   * In case you have multiple IBM Cloud accounts, then select the target Account, Region, Organization and Space.
@@ -83,7 +84,6 @@ We use [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-o
 
   * Back in IBM Cloud Object Storage dashboard, select `Bucket permissions` under `Buckets` click on `policies`.
   * Click on `Service IDs` tab. Under `Select a service ID`, select the service ID created in the above step. Under `Assign a role to this service ID for this bucket`, select `Writer`. Click `Create policy as shown below.
-
 
   <img src="doc/source/images/serviceid.png" alt="Cloud Object Storage" width="800" border="10" />
 
@@ -130,7 +130,6 @@ To access the Cloud Object Storage service programmatically, you need to copy in
 $ python3 upload.py
 
 ```
-
 
 #### 2.3. Sign up for IBM Db2 on Cloud Service
 
@@ -747,9 +746,7 @@ $
 
 * Distribute `thejewellerystore.apk` by uploading to Google Play Store or to your company's internal App store.
 
-<!--Optionally, include any troubleshooting tips (driver issues, etc)-->
-
-# Troubleshooting
+## Troubleshooting
 
 ### Debugging Android hybrid app using Chrome Developer Tools
 
