@@ -1,5 +1,0 @@
----
-applications:
- - name: Jewellery
-   random-route: true
-   memory: 256M
