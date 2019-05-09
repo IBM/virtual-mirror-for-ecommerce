@@ -1,7 +1,0 @@
-{
-  "name": "TheJewelleryStoreApp",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
