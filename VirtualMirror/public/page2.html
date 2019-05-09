@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script src="face-api.js"></script>
+  <!--<script src="js/commons.js"></script>!-->
+  <script src="/public/js/drawing.js"></script>
+  <script src="/public/js/faceDetectionControls.js"></script>
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+<body background="images/index.jpg">
+  <!--<div id="navbar"></div>
+  <div class="center-content page-container">!-->
+  <div class="center-content page-container">
+
+
+    <div style="position: relative" class="margin">
+      <video onplay="onPlay(this)" id="inputVideo" autoplay muted ></video>
+      <canvas id="overlay" />
+    </div>
+
+    <div class="row side-by-side">
+
+
+		<div style="text-align:center">
+			<h1 style="color:white;">Virtual Mirror</h2>
+		</div>
+      <!-- check boxes -->
+
+      <!-- fps_meter -->
+	<img src="" id="myNoseImg" height="0px" width="0px"/>
+	<img src="" id="myEarImg" height="0px" width="0px"/>
+    </div>
+
+
+
+    <!-- tiny_face_detector_controls 
+    <span id="tiny_face_detector_controls">
+      <div class="row side-by-side">
+        <div class="row input-field" style="margin-right: 20px;">
+          <select id="inputSize">
+            <option value="" disabled selected>Input Size:</option>
+            <option value="128">128 x 128</option>
+            <option value="160">160 x 160</option>
+            <option value="224">224 x 224</option>
+            <option value="320">320 x 320</option>
+            <option value="416">416 x 416</option>
+            <option value="512">512 x 512</option>
+            <option value="608">608 x 608</option>
+          </select>
+          <label>Input Size</label>
+        </div>
+        <div class="row">
+          <label for="scoreThreshold">Score Threshold:</label>
+          <input disabled value="0.5" id="scoreThreshold" type="text" class="bold">
+        </div>
+        <button
+          class="waves-effect waves-light btn"
+          onclick="onDecreaseScoreThreshold()"
+        >
+          <i class="material-icons left">-</i>
+        </button>
+        <button
+          class="waves-effect waves-light btn"
+          onclick="onIncreaseScoreThreshold()"
+        >
+          <i class="material-icons left">+</i>
+        </button>
+      </div>
+    </span> -->
+	
+    <!-- tiny_face_detector_controls -->
+
+
+  </body>
+
+  <script>
+    let forwardTimes = []
+    let withBoxes = false
+
+    async function onPlay() {
+
+      const videoEl = $('#inputVideo').get(0)
+
+      if(videoEl.paused || videoEl.ended || !isFaceDetectionModelLoaded())
+        return setTimeout(() => onPlay())
+
+
+      const options = getFaceDetectorOptions()
+
+      const result = await faceapi.detectSingleFace(videoEl, options).withFaceLandmarks()
+
+      	  		var queryString = decodeURIComponent(window.location.search);
+			queryString = queryString.substring(1);
+			var queries = queryString.split("=");
+	  if (result) {
+				if(queries[2] == "Nose"){
+				document.getElementById("myNoseImg").src = queries[1];
+				var nimg = document.getElementById("myNoseImg");
+				drawJewellery(videoEl, $('#overlay').get(0), [result], withBoxes, nimg, queries[3], queries[4])			
+				}
+				else if(queries[2] == "Ear"){
+				document.getElementById("myEarImg").src = queries[1];
+				var eimg = document.getElementById("myEarImg");
+				drawJewelleryEars(videoEl, $('#overlay').get(0), [result], withBoxes, eimg, queries[3], queries[4])
+		}	
+	  //console.log(result)
+        //drawLandmarks(videoEl, $('#overlay').get(0), [result], withBoxes)
+		//var nimg = document.getElementById("myNoseImg");
+		//var eimg = document.getElementById("myEarImg");
+		//console.log(eimg);
+		//drawJewellery(videoEl, $('#overlay').get(0), [result], withBoxes, nimg)
+		//drawJewelleryEars(videoEl, $('#overlay').get(0), [result], withBoxes, eimg)
+		//drawJewelleryWebcam(videoEl, $('#overlay').get(0), [result], withBoxes, nimg, eimg)
+      }
+
+      setTimeout(() => onPlay())
+    }
+
+    async function run() {
+      // load face detection and face landmark models
+      await changeFaceDetector(TINY_FACE_DETECTOR)
+      await faceapi.loadFaceLandmarkModel('/')
+      changeInputSize(224)//608
+
+      // try to access users webcam and stream the images
+      // to the video element
+      const stream = await navigator.mediaDevices.getUserMedia({ video: {} })
+      const videoEl = $('#inputVideo').get(0)
+      videoEl.srcObject = stream
+    }
+
+    function updateResults() {}
+
+    $(document).ready(function() {
+      //renderNavBar('#navbar', 'code_image')
+      run()
+    })
+  </script>
+</body>
+</html>
