@@ -4,8 +4,8 @@ Virtual try on apps have the full potential to become the next big thing in e-co
 
 In this code pattern, we will develop a hybrid mobile application using Mobile First Foundation integrated with recommendation system based on Watson Visual Recognition , which takes in an image of the user as input and detects his/her features(like age, gender, etc) with the help of Watson Visual Recognition model. Based on these features, the recommendation engine returns a personalized recommendation of jewellery products. The user can later try these jewellery products virtually using the virtual mirror feature.
 
-This is a composite pattern and requires you to have a knowledge of the following code pattern:
-* [Recommendation system based on visual recognition](https://github.com/IBM/recommender-with-watson-visual-recognition)
+<b>NOTE: This is a composite pattern and requires you to have a knowledge of the following code pattern, please complete the code pattern mentioned below:
+* [Recommendation system based on visual recognition](https://github.com/IBM/recommender-with-watson-visual-recognition) </b>
 
 When the reader has completed this Code Pattern, they will understand how to:
 
