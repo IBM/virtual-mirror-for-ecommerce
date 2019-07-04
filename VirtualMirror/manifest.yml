@@ -1,0 +1,4 @@
+applications:
+- name: virtuarmirror
+  random-route: true
+  memory: 256M

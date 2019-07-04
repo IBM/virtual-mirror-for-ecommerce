@@ -10,7 +10,7 @@ java version "1.8.0_101"
 ```
 
 #### 2. Problems related to MobileFirst Foundation Server
-* During step 5.2 if you are unable to add server and if you get some message as shown below,
+* During step 5.2 if you are unable to add server and if you get some message as shown bellow,
 ```
 $ mfpdev server add
 ? Enter the name of the new server profile: MyServer
