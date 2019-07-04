@@ -576,7 +576,7 @@ $ ionic cordova run android
 
 * You can select any Jewellery to view it virtually on your face in real-time.
 
-<img src="doc/source/images/Screenshots/virtualmirror.png" alt="VirtualMirror" width="240"  /> 
+<img src="doc/source/images/Screenshots/tryon.png" alt="VirtualMirror" width="240"  /> 
 
 ##### 4.5.6 Update App Logo and Splash (Optional)
 
