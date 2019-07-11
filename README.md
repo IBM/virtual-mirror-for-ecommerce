@@ -356,6 +356,14 @@ Gradle 5.1.1 ...
 ```
 On Windows, you can follow this [Tutorial](https://gradle.org/install/) to install Gradle.
 
+* Go to `JewelleryStoreApp` and run the following commands:
+```
+$ npm install
+```
+```
+$ ionic cordova platform add android --save
+```
+
 #### 4.2 Create Mobile Foundation service and configure MFP CLI
 * In the [IBM Cloud Dashboard](https://cloud.ibm.com/), click on `Catalog` and select [Mobile Foundation](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Platform` -> `Mobile`. Click on `Create` as shown below.
 
