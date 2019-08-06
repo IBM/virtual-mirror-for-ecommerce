@@ -14,7 +14,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Setup a recommendation engine and integrate it with mobile application.
 
 <!--add an image in this path-->
-![](doc/source/images/Architecture_main.png)
+![](doc/source/images/flow.png)
 
 <!--Optionally, add flow steps based on the architecture diagram-->
 ## Flow
