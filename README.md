@@ -51,11 +51,11 @@ Please follow the below to setup and run this code pattern.
 
 ### 1. Clone the repo
 
-Clone this [git repo](https://github.ibm.com/raravi86/Virtual-Mirror.git).
+Clone this [git repo](https://github.com/IBM/virtual-mirror-for-ecommerce.git).
 Else, in a terminal, run:
 
 ```
-$ git clone https://github.com/RahulReddyRavipally/Virtual-Mirror.git
+$ git clone https://github.com/IBM/virtual-mirror-for-ecommerce.git
 ```
 ### 2. Recommendation Engine Setup
 
