@@ -358,7 +358,7 @@ On Windows, you can follow this [Tutorial](https://gradle.org/install/) to insta
 
 
 #### 4.2 Create Mobile Foundation service and configure MFP CLI
-* In the [IBM Cloud Dashboard](https://cloud.ibm.com/), click on `Catalog` and select [Mobile Foundation](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Platform` -> `Mobile`. Click on `Create` as shown below.
+* In the [IBM Cloud Dashboard](https://cloud.ibm.com/), open [Mobile Foundation](https://cloud.ibm.com/catalog/services/mobile-foundation). Click on `Create` as shown below.
 
   <img src="doc/source/images/CreateMobileFoundationService.png" alt="Create IBM Mobile Foundation service" width="800" border="10" />
 
