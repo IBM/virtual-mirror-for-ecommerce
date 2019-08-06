@@ -44,7 +44,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 Please follow the below to setup and run this code pattern.
 
 1. [Clone the repo](#1-clone-the-repo)
-2. [Recomendation Engine Setup](#2-recomendation-engine-setup)
+2. [Recommendation Engine Setup](#2-recommendation-engine-setup)
 3. [Virtual Mirror Setup](#3-virtual-mirror-setup)
 4. [Mobile Application Setup](#4-mobile-application-setup)
 
