@@ -318,7 +318,7 @@ $ ionic --version
 4.12.0
 ```
 
-* Install IBM MobileFirst Platform CLI
+* Install IBM Mobile Foundation Platform CLI
 ```
 $ sudo npm install -g mfpdev-cli
 $ mfpdev --version
@@ -386,11 +386,11 @@ $ mfpdev server add
 ```
 ? Enter the name of the new server profile: MyServer
 ? Enter the fully qualified URL of this server: https://mobilefoundation-xxxx-xxxxx.xx-xx.mybluemix.net:443
-? Enter the MobileFirst Server administrator login ID: admin
-? Enter the MobileFirst Server administrator password: **********
+? Enter the IBM Mobile Foundation Server administrator login ID: admin
+? Enter the IBM Mobile Foundation Server administrator password: **********
 ? Save the administrator password for this server?: Yes
-? Enter the context root of the MobileFirst administration services: mfpadmin
-? Enter the MobileFirst Server connection timeout in seconds: 30
+? Enter the context root of the IBM Mobile Foundation administration services: mfpadmin
+? Enter the IBM Mobile Foundation Server connection timeout in seconds: 30
 ? Make this server the default?: Yes
 Verifying server configuration...
 The following runtimes are currently installed on this server: mfp
@@ -421,7 +421,7 @@ in `JewelleryStoreApp/config.xml` as below. Change `id`, `name`, `description` a
 &lt;?xml version='1.0' encoding='utf-8'?&gt;
 &lt;widget <b>id="com.ibm.mfpthejewellerystore"</b> version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:mfp="http://www.ibm.com/mobilefirst/cordova-plugin-mfp"&gt;
     <b>&lt;name&gt;The Jewellery Store&lt;/name&gt;
-    &lt;description&gt;A virtual mirror integration into ecommerce products with the help of mobilefirst foundation.&lt;/description&gt;
+    &lt;description&gt;A virtual mirror integration into ecommerce products with the help of IBM Mobile Foundation.&lt;/description&gt;
     &lt;author email="example@in.ibm.com" href="/"&gt;Code Patterns Team &lt;/author&gt;</b>
 ...Specify Cloud Object Storage credentials in MFP Adapter
 Recommendation Engine API & Virtual Mirror API in MFP Adapter
