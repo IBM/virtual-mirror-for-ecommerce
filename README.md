@@ -20,7 +20,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Flow
 
 1. Take input from user's mobile.
-2. The input is passed via Mobile First Foundation.
+2. The input is passed via IBM Mobile Foundation.
 3. IBM Mobile Foundation passes the user's input to the recommendation engine.
 4. Recommendation engine interacts with IBM Db2 to get the necessary product details for the recommended products.
 5. Images of the recommended products is retrieved from Cloud Object Storage.
