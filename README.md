@@ -21,12 +21,12 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 1. Take input from user's mobile.
 2. The input is passed via Mobile First Foundation.
-3. Mobile First Foundation passes the user's input to the recommendation engine.
+3. IBM Mobile Foundation passes the user's input to the recommendation engine.
 4. Recommendation engine interacts with IBM Db2 to get the necessary product details for the recommended products.
 5. Images of the recommended products is retrieved from Cloud Object Storage.
 6. Recommendation engine returns the images and details of the recommended products to the user's mobile application.
 7. User can click on virtual mirror button to access virtual mirror.
-8. Mobile First Foundation passes the user's input to the virtal mirror application.
+8. IBM Mobile Foundation passes the user's input to the virtal mirror application.
 9. Virtual mirror application gives access to the user.
 10. User can view the virtual mirror.
 
