@@ -6,7 +6,7 @@ In this code pattern, we will develop a hybrid mobile application using IBM Mobi
 
 When the reader has completed this Code Pattern, they will understand how to:
 
-* Connect to Mobile First Foundation using a mobile application.
+* Connect to IBM Mobile Foundation using a mobile application.
 * Take inputs from mobile application and do required processing on IBM Cloud.
 * Deploy and use cloud foundry applications.
 * Access images from Cloud Object Storage using a mobile application.
