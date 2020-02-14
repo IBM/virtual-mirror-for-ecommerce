@@ -670,6 +670,8 @@ $
 
 <!--Optionally, include any troubleshooting tips (driver issues, etc)-->
 
+<a href="https://www.freepik.com/free-photos-vectors/background">Background vector in the app and the app logo has been designed using resources from Freepik.com created by flatart - www.freepik.com</a>
+
 # Troubleshooting
 
 ### Debugging Android hybrid app using Chrome Developer Tools
