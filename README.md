@@ -304,16 +304,16 @@ v10.15.0
 
 * Install Cordova
 ```
-$ sudo npm install -g cordova@8.1.2
+$ sudo npm install -g cordova@9.0.0
 $ cordova --version
-8.1.2
+9.0.0
 ```
 
 > Note: Please refer MFP documentation for compatible versions of Cordova - https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/application-development/sdk/cordova/
 
 * Install Ionic
 ```
-$ sudo npm install -g ionic@4.12.0
+$ sudo npm install -g ionic@5.4.16
 $ ionic --version
 4.12.0
 ```
@@ -352,12 +352,13 @@ On Mac, you can use `brew install` for installing Maven as shown below:
 ```
 $ brew install gradle
 $ gradle --version
-Gradle 5.1.1 ...
+Gradle 6.3 ...
 ```
 On Windows, you can follow this [Tutorial](https://gradle.org/install/) to install Gradle.
 
 
 #### 4.2 Create Mobile Foundation service and configure MFP CLI
+
 * In the [IBM Cloud Dashboard](https://cloud.ibm.com/), open [Mobile Foundation](https://cloud.ibm.com/catalog/services/mobile-foundation). Click on `Create` as shown below.
 
   <img src="doc/source/images/CreateMobileFoundationService.png" alt="Create IBM Mobile Foundation service" width="800" border="10" />
@@ -434,18 +435,8 @@ Recommendation Engine API & Virtual Mirror API in MFP Adapter
 ```
 $ cd MobileFoundationAdapter
 
-$ cd ImageFetch
+$ cd ImagesFetch
 ```
-* Add the `URL` along with the port number `:443` appended with `/mfpadmin`, `User` and `Password` in the `pom.xml` file which is present in `ImageFetch` directory as show bellow.
-
-<pre><code>
-...
-<b>&lt;mfpfUrl&gt;https://mobilefoundation-xxxx-xxxxxx.xx-xx.mybluemix.net:443/mfpadmin &lt;/mfpfUrl&gt;</b>
-<b>&lt;mfpfUser&gt;admin &lt;/mfpfUser&gt;</b>
-<b>&lt;mfpfPassword&gt;******** &lt;/mfpfPassword&gt;</b>
-&lt;mfpfRuntime&gt;mfp &lt;/mfpfRuntime&gt;
-...
-</code></pre>
 
 * Build the `ImageFetch` adapter as shown below.
 ```

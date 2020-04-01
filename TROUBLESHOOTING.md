@@ -56,7 +56,7 @@ $ ionic cordova platform remove android
 
 * Add Cordova platform for Android.
 ```
-$ ionic cordova platform add android@6.4.0
+$ ionic cordova platform add android@8.1.0
 ...
 ```
 
@@ -65,7 +65,7 @@ $ ionic cordova platform add android@6.4.0
 ```
 $ cordova platform version
 Installed platforms:
-	 android 6.4.0
+	 android 8.1.0
 Available platforms:
 	 browser ~4.1.0
 	 ios ~4.4.0
