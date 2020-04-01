@@ -1,5 +1,5 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { IonicModule } from '@ionic/angular';
 
 import { RecommendationPage } from './recommendation.page';
 
@@ -10,16 +10,13 @@ describe('RecommendationPage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ RecommendationPage ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    })
-    .compileComponents();
-  }));
+      imports: [IonicModule.forRoot()]
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(RecommendationPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();

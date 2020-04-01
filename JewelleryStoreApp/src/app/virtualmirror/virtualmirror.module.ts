@@ -23,4 +23,4 @@ const routes: Routes = [
   ],
   declarations: [VirtualmirrorPage, SafePipe]
 })
-export class VirtualmirrorPageModule {}
+export class VirtualmirrorPageModule { }

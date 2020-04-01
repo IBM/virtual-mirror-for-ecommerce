@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
-import {DomSanitizer} from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Pipe, PipeTransform } from '@angular/core';
 import { ProviderService } from '../provider.service';
 import { ToastController } from '@ionic/angular';
@@ -13,20 +13,20 @@ import { ToastController } from '@ionic/angular';
 })
 export class VirtualmirrorPage implements OnInit {
 
-  virtualMirrorAPI:string;
-  virtualMirrorAccess:any;
-  objectStorageAccess:any;
-  objectStorageBaseUrl:string;
-  receivedUrl:string;
-  folder:string;
-  finalUrl:string; 
-  imgUrl:string;
-  type:string;
-  height:string;
-  width:string;
+  virtualMirrorAPI: string;
+  virtualMirrorAccess: any;
+  objectStorageAccess: any;
+  objectStorageBaseUrl: string;
+  receivedUrl: string;
+  folder: string;
+  finalUrl: string;
+  imgUrl: string;
+  type: string;
+  height: string;
+  width: string;
 
-  constructor(public loadingController:LoadingController, public toastController: ToastController, private activatedRoute: ActivatedRoute, public sanitizer: DomSanitizer, public providerService: ProviderService) { 
-    
+  constructor(public loadingController: LoadingController, public toastController: ToastController, private activatedRoute: ActivatedRoute, public sanitizer: DomSanitizer, public providerService: ProviderService) {
+
     // Get the parameters from recommendation page
 
     this.folder = this.activatedRoute.snapshot.paramMap.get('folder');
@@ -39,10 +39,9 @@ export class VirtualmirrorPage implements OnInit {
   }
 
 
-  async presentToastWithOptions(msg:string) {
+  async presentToastWithOptions(msg: string) {
     const toast = await this.toastController.create({
       message: msg,
-      showCloseButton: false,
       position: 'bottom',
       duration: 1000
     });
@@ -58,31 +57,31 @@ export class VirtualmirrorPage implements OnInit {
     });
     loading.present().then(() => {
       console.log('--> Cloud Object Storage authorization method in Virtual Mirror page called');
-        this.providerService.getObjectStorageAccess().then(objectStorageAccess => {
-          this.objectStorageAccess = objectStorageAccess;
-          console.log('--> Received Object: '+this.objectStorageAccess);
-          this.objectStorageBaseUrl = this.objectStorageAccess.baseUrl;
-          this.imgUrl=this.objectStorageBaseUrl+this.folder+"/"+this.receivedUrl;
-          console.log('--> Image: '+this.imgUrl);
-          loading.dismiss();
-          this.presentToastWithOptions("Cloud Object Storage authorization successful.");
-        });
-    }).catch (() => {
+      this.providerService.getObjectStorageAccess().then(objectStorageAccess => {
+        this.objectStorageAccess = objectStorageAccess;
+        console.log('--> Received Object: ' + this.objectStorageAccess);
+        this.objectStorageBaseUrl = this.objectStorageAccess.baseUrl;
+        this.imgUrl = this.objectStorageBaseUrl + this.folder + "/" + this.receivedUrl;
+        console.log('--> Image: ' + this.imgUrl);
+        loading.dismiss();
+        this.presentToastWithOptions("Cloud Object Storage authorization successful.");
+      });
+    }).catch(() => {
       this.presentToastWithOptions("MobileFirst Foundation Adapter Failed to authorize COS.");
     });
   }
 
-  async VirtualMirror(){
+  async VirtualMirror() {
     const loading = await this.loadingController.create({
       message: 'please wait...',
     });
     const loadingagain = await this.loadingController.create({
       message: 'Loading Virtual Mirror...',
       duration: 6000
-    });   
-    loading.present().then( () => {
-      this.finalUrl="https://"+this.virtualMirrorAPI+"/page2.html?para1="+this.imgUrl+"="+this.type+"="+this.height+"="+this.width;
-      console.log('--> Final URL: '+this.finalUrl);
+    });
+    loading.present().then(() => {
+      this.finalUrl = "https://" + this.virtualMirrorAPI + "/page2.html?para1=" + this.imgUrl + "=" + this.type + "=" + this.height + "=" + this.width;
+      console.log('--> Final URL: ' + this.finalUrl);
       loading.dismiss();
       loadingagain.present();
     });
@@ -90,13 +89,11 @@ export class VirtualmirrorPage implements OnInit {
 
   ngOnInit() {
     this.loadCloudObjectStorageData();
-    
-    if(this.virtualMirrorAPI !== null)
-    {
+
+    if (this.virtualMirrorAPI !== null) {
       this.VirtualMirror();
     }
-    else
-    {
+    else {
       this.presentToastWithOptions("Virtual Mirror Not Configured. Cannot Open.");
     }
   }
@@ -106,7 +103,7 @@ export class VirtualmirrorPage implements OnInit {
 
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) { }
   transform(finalUrl) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(finalUrl);
   }

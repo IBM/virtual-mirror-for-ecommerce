@@ -10,21 +10,21 @@ import { ProviderService } from '../provider.service';
 })
 export class HomePage {
 
-  name:string;
-  age:string;
-  gender:string;
+  name: string;
+  age: string;
+  gender: string;
 
-  constructor(private nav: NavController,public loadingController:LoadingController,
+  constructor(private nav: NavController, public loadingController: LoadingController,
     private androidPermissions: AndroidPermissions, public providerService: ProviderService,
-    public toastController: ToastController){
+    public toastController: ToastController) {
     this.getCameraPermission();
   }
 
-  getCameraPermission(){
+  getCameraPermission() {
     console.log('--> Camera permission checking in progress');
     this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.CAMERA).then((result) => {
-      console.log('Has permission?',result.hasPermission);
-      if (!result.hasPermission){
+      console.log('Has permission?', result.hasPermission);
+      if (!result.hasPermission) {
         this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.CAMERA);
       }
     }, (err) => {
@@ -32,34 +32,33 @@ export class HomePage {
     });
   }
 
-   //Toast setup
+  //Toast setup
 
-   async presentToastWithOptions(msg:string) {
+  async presentToastWithOptions(msg: string) {
     const toast = await this.toastController.create({
       message: msg,
-      showCloseButton: false,
       position: 'bottom',
       duration: 1000
     });
     toast.present();
   }
 
-getRecommendations(){
+  getRecommendations() {
 
-  if (this.name == null){
-    this.presentToastWithOptions("Please Enter a Name");
+    if (this.name == null) {
+      this.presentToastWithOptions("Please Enter a Name");
+    }
+    else if (this.age == null) {
+      this.presentToastWithOptions("Please Enter age");
+    }
+    else if (this.gender == null) {
+      this.presentToastWithOptions("Please choose a gender");
+    }
+    else if (this.name != null && this.age != null && this.gender != null) {
+      this.nav.navigateForward(`/recommendation/${this.age}/${this.name}/${this.gender}`);
+    }
+    else {
+      this.presentToastWithOptions("Check the Name/Age/Gender and try again.");
+    }
   }
-  else if (this.age == null){
-    this.presentToastWithOptions("Please Enter age");
-  }
-  else if (this.gender == null){
-    this.presentToastWithOptions("Please choose a gender");
-  }
-  else if (this.name != null && this.age != null && this.gender !=null){
-    this.nav.navigateForward(`/recommendation/${this.age}/${this.name}/${this.gender}`);
-  }
-  else {
-    this.presentToastWithOptions("Check the Name/Age/Gender and try again.");
-  }  
-}
 }

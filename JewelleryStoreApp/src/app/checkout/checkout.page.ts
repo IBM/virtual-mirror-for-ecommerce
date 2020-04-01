@@ -19,13 +19,13 @@ export class CheckoutPage implements OnInit {
     this.loadCart();
   }
 
-  removeLast(){
+  removeLast() {
     this.cartService.clearCart();
     this.total = 0;
     this.loadCart();
   }
 
-  loadCart(){
+  loadCart() {
     this.items = this.cartService.getCart();
     for (const iterator of this.items) {
       this.total = this.total + parseFloat(iterator.price);

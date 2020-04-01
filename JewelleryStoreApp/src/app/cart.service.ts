@@ -16,10 +16,10 @@ export class CartService {
   getCart() {
     return this.cart;
   }
-  addProduct(product){
+  addProduct(product) {
     this.cart.push(product);
   }
-  clearCart(){
+  clearCart() {
     this.cart.pop();
   }
 }
