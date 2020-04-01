@@ -20,7 +20,7 @@ COS_API_KEY_ID = ""
 COS_AUTH_ENDPOINT = ""
 COS_RESOURCE_CRN = ""
 COS_BUCKET_LOCATION = "us-standard"
-bucket_name = "XXXX"
+bucket_name = "vmtest1"
 
 '''Cloud Object Storage Methods'''
 # have a separate credentials1.json file where the credentials of your bucket associated with notebook is listed
@@ -75,7 +75,8 @@ def multi_part_upload(bucket_name, item_name, file_path):
         with open(file_path, "rb") as file_data:
             cos.Object(bucket_name, item_name).upload_fileobj(
                 Fileobj=file_data,
-                Config=transfer_config
+                Config=transfer_config,
+                ExtraArgs={"ACL": "public-read"}
             )
 
         print("Transfer for {0} Complete!\n".format(item_name))
