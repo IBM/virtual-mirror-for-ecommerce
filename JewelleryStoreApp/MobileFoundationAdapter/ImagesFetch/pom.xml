@@ -15,17 +15,6 @@
 	<packaging>adapter</packaging>
 	<name>ImagesFetch</name>
 
-	<properties>
-		<!-- Use UTF-8 as the encoding of the adapter -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-		<!-- MobileFirst adapter deployment properties -->
-        <mfpfUrl>http://localhost:8080/mfpadmin</mfpfUrl>
-		<mfpfUser>admin</mfpfUser>
-		<mfpfPassword></mfpfPassword>
-		<mfpfRuntime>mfp</mfpfRuntime>
-	</properties>
-
 <dependencies>
 		<dependency>
 			<groupId>com.ibm.mfp</groupId>
