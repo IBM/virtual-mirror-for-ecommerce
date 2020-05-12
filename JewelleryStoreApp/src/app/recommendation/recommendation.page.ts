@@ -169,7 +169,7 @@ export class RecommendationPage implements OnInit {
   tryvirtually(imageUrl: string, type: string, height: string, width: string) {
     this.presentToastWithOptions("Hang ON!");
     this.api = this.virtualMirrorAPI.split("//", 2);
-    this.nav.navigateForward(`/virtualmirror/${imageUrl}/${type}/${height}/${width}/${this.api[1]}`);
+    this.nav.navigateForward(`/virtualmirror/${imageUrl.split('/')[0]}/${imageUrl.split('/')[1]}/${type}/${height}/${width}/${this.api[1]}`);
   }
 
 
