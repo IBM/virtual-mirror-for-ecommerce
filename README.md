@@ -538,7 +538,7 @@ Registered app for platform: android
 > Note: To Propagate changes by running `cordova prepare`
 
 
-##### 4.5.5 Build/Run the Ionic application on Android phone
+##### 4.5.4 Build/Run the Ionic application on Android phone
 
 * Build Android application
 ```
@@ -570,7 +570,7 @@ $ ionic cordova run android
 
 <img src="doc/source/images/vm.gif" alt="VirtualMirror" width="240"  /> 
 
-##### 4.5.6 Update App Logo and Splash (Optional)
+##### 4.5.5 Update App Logo and Splash (Optional)
 
 Reference: Automating Icons and Splash Screens https://blog.ionicframework.com/automating-icons-and-splash-screens/
 
