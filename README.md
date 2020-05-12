@@ -469,6 +469,9 @@ Update MFP Adapter configuration as below:
   * The `Cloud Object Storage Bucket Name` can be found in step 2.1.1, `Cloud Object Storage API Key` can be found in step 2.1.2, `Cloud Object Storage Endpoint` can be found by going to [Cloud Object Storage Dashboard](https://cloud.ibm.com/objectstorage/) clicking on `Endpoint` and the public link for Resiliency and Location as selected in step 2.1.1 and `Cloud Object Storage Service ID` can be found in step 2.1.2.
 
   * The `Recommendation Engine API URL` can be found in step 2.7, `Virtual Mirror API URL` can be found in step 3.
+  
+  **NOTE: Example URL Would be something like this: https://appname.xx-xx.xx.appdomain.cloud**
+  **If the URL has a `/` at the end of the link, remove the `/` else it will cause problem with the mobile application.**
 
   * Click on `Resources` tab. You should see the various REST APIs exposed by `ImageFetch` adapter as shown below.
 
