@@ -4,12 +4,12 @@ ibm-cos-sdk==2.4.2
 ibm-cos-sdk-core==2.4.2
 ibm-cos-sdk-s3transfer==2.4.2
 matplotlib==2.1.2
-numpy==1.15.4
+numpy==1.17.4
 numpydoc==0.8.0
-pandas==0.23.4
+pandas==0.25.3
 pandocfilters==1.4.2
-scikit-image==0.14.1
-scikit-learn==0.20.1
+scikit-image==0.17.2
+scikit-learn==0.23.0
 ibm_db==2.0.9
 msgpack==0.6.1
 ibmdbpy==0.1.5
