@@ -571,8 +571,6 @@ $ ionic cordova run android
 
 * You can select any Jewellery to view it virtually on your face in real-time.
 
-<img src="doc/source/images/vm.gif" alt="VirtualMirror" width="240"  /> 
-
 ##### 4.5.5 Update App Logo and Splash (Optional)
 
 Reference: Automating Icons and Splash Screens https://blog.ionicframework.com/automating-icons-and-splash-screens/
