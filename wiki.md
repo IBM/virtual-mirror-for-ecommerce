@@ -42,6 +42,7 @@ In the era of Digital Transformation, Augmented Reality is one of the interactiv
 
 # Description
 
+WARNING: This repository is no longer maintained :warning: This repository will not be updated. The repository will be kept available in read-only mode.
 
 The Internet has changed the way we live our lives in major ways and in simple ones, from how we connect with our loved ones to how we order our food. In the commerce space, consumers are more informed than ever and while online shopping is a ubiquitous thing, the data every shopper has access to at their fingertips or in their pockets has even changed the game for in-store purchases.As digital transformation grows more prominent with each passing day, e-commerce will grow bigger and better as shopping from home becomes easier and friendlier.
 
