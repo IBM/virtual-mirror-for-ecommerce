@@ -4,7 +4,7 @@ ibm-cos-sdk==2.4.2
 ibm-cos-sdk-core==2.4.2
 ibm-cos-sdk-s3transfer==2.4.2
 matplotlib==2.1.2
-numpy==1.17.4
+numpy==1.22.0
 numpydoc==0.8.0
 pandas==0.25.3
 pandocfilters==1.4.2
