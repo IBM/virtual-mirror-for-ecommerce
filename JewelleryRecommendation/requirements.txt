@@ -1,5 +1,5 @@
 Flask==1.0.2
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 ibm-cos-sdk==2.4.2
 ibm-cos-sdk-core==2.4.2
 ibm-cos-sdk-s3transfer==2.4.2
